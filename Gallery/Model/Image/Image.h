@@ -6,9 +6,9 @@
 //  Copyright © 2017 Alex Vihlayew. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
-@interface Image : NSObject
+@interface Image : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSImage* image;
 @property (strong, nonatomic) NSString* name;

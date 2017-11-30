@@ -25,6 +25,14 @@
     return self;
 }
 
+- (instancetype)copyWithZone:(NSZone *)zone
+{
+    Image* cpy = [[[self class] alloc] initWithImage:[image copy]
+                                                name:[name copy]
+                                                path:[path copy]];
+    return cpy;
+}
+
 - (void)save
 {
     
