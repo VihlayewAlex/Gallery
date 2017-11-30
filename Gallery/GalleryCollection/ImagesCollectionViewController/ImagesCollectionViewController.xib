@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ImagesCollectionViewController">
             <connections>
                 <outlet property="imagesCollectionView" destination="PWH-Ra-wrC" id="mdM-nG-tYr"/>
+                <outlet property="pathControl" destination="CE5-5X-QTW" id="b2h-hC-3Xd"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -18,13 +19,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-mH-XPo">
-                    <rect key="frame" x="0.0" y="20" width="480" height="290"/>
+                    <rect key="frame" x="0.0" y="14" width="480" height="296"/>
                     <clipView key="contentView" drawsBackground="NO" id="IvK-Za-SfS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="290"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="296"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView id="PWH-Ra-wrC">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="290"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="296"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10">
                                     <size key="itemSize" width="50" height="50"/>
@@ -39,15 +40,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6m9-B1-9O3">
-                        <rect key="frame" x="464" y="0.0" width="16" height="290"/>
+                        <rect key="frame" x="464" y="0.0" width="16" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
                 <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE5-5X-QTW">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="20"/>
-                    <pathCell key="cell" controlSize="small" selectable="YES" alignment="left" id="s4P-tR-Lj2">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="14"/>
+                    <pathCell key="cell" controlSize="small" selectable="YES" alignment="left" placeholderString="Select image to display path" id="s4P-tR-Lj2">
                         <font key="font" metaFont="smallSystem"/>
-                        <url key="url" string="file:///"/>
                         <color key="backgroundColor" red="0.19358935246421155" green="0.19661354423317598" blue="0.19901635362694303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </pathCell>
                 </pathControl>

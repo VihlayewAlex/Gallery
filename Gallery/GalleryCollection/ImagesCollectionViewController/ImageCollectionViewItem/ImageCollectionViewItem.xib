@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ImageCollectionViewItem">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-rS-LZy">
+                    <rect key="frame" x="0.0" y="55" width="170" height="75"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="jU9-SE-o4f"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yjk-IP-p7f">
+                    <rect key="frame" x="-2" y="35" width="174" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="eed-OX-0ua"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="kw6-Jt-Rcz">
+                        <font key="font" metaFont="systemMedium" size="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Dg-69-r2k">
+                    <rect key="frame" x="-2" y="0.0" width="174" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="goz-Ob-eO1"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="7k1-bC-dde">
+                        <font key="font" metaFont="system" size="10"/>
+                        <string key="title">Multiline Label rg erg regregreg regreg rergerhgteh teheh rgeg r th hthwththw rw thwh rtwhtrhr Multiline Label rg erg regregreg regreg rergerhgteh teheh rgeg r th hthwththw rw thwh rtwhtrhr</string>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gub-rS-LZy" secondAttribute="trailing" id="2Io-8l-zyQ"/>
+                <constraint firstItem="Yjk-IP-p7f" firstAttribute="top" secondItem="Gub-rS-LZy" secondAttribute="bottom" id="5M6-pa-Fbb"/>
+                <constraint firstItem="6Dg-69-r2k" firstAttribute="top" secondItem="Yjk-IP-p7f" secondAttribute="bottom" id="Idx-E4-7Hq"/>
+                <constraint firstItem="Gub-rS-LZy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Lg5-vI-hqD"/>
+                <constraint firstAttribute="trailing" secondItem="Yjk-IP-p7f" secondAttribute="trailing" id="SpZ-AW-uVH"/>
+                <constraint firstItem="Gub-rS-LZy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="eP0-xe-dCT"/>
+                <constraint firstAttribute="trailing" secondItem="6Dg-69-r2k" secondAttribute="trailing" id="fGm-gt-rkn"/>
+                <constraint firstItem="6Dg-69-r2k" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="jK2-Oi-fVY"/>
+                <constraint firstAttribute="bottom" secondItem="6Dg-69-r2k" secondAttribute="bottom" id="qgh-UO-lFN"/>
+                <constraint firstItem="Yjk-IP-p7f" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="u83-9E-FnJ"/>
+            </constraints>
+            <gestureRecognizers>
+                <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="n0w-bS-sYD">
+                    <connections>
+                        <action selector="click:" target="Xwb-Zn-u6r" id="adm-TW-qkV"/>
+                    </connections>
+                </clickGestureRecognizer>
+                <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="2" id="qas-cj-gkq">
+                    <connections>
+                        <action selector="doubleClick:" target="-2" id="TMz-HX-txQ"/>
+                    </connections>
+                </clickGestureRecognizer>
+            </gestureRecognizers>
+            <point key="canvasLocation" x="363" y="368"/>
+        </customView>
+        <collectionViewItem id="Xwb-Zn-u6r" customClass="ImageCollectionViewItem">
+            <connections>
+                <outlet property="nameLabel" destination="Yjk-IP-p7f" id="ERL-Zn-hfh"/>
+                <outlet property="pathLabel" destination="6Dg-69-r2k" id="VFf-Cw-1a8"/>
+                <outlet property="previewImageView" destination="Gub-rS-LZy" id="rVl-7j-JhG"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="UJ8-JR-7HI"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>

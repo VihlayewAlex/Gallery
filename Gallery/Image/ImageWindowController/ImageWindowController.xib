@@ -5,40 +5,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="PhotoCollectionWindowController">
+        <customObject id="-2" userLabel="File's Owner" customClass="ImageWindowController">
             <connections>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="F0z-JX-Cv5">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Image" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="600" height="330"/>
+            <rect key="contentRect" x="196" y="240" width="330" height="330"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <value key="minSize" type="size" width="600" height="330"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="1ED0C7EA-DC37-47AF-9365-DC3B11DB38A8" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="pHg-Zy-ohj">
+            <toolbar key="toolbar" implicitIdentifier="1DBC8329-B8E4-49B5-B682-4D7575797194" autosavesConfiguration="NO" displayMode="labelOnly" sizeMode="regular" id="Ub0-ZM-Ker">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="355F202F-CF0F-48DC-9C8E-F6B64092ACF0" label="Add image" paletteLabel="Add image" tag="-1" image="NSFolder" id="8hM-G6-f2N"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="j0z-1G-LKl"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="QxY-x1-yug"/>
+                    <toolbarItem implicitItemIdentifier="93016DB8-6032-441C-AF1B-DBDC0E8FA0F1" explicitItemIdentifier="NSToolbarBlurItem" label="Blur" paletteLabel="Blur" tag="-1" id="dvm-QY-ZCQ"/>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="8hM-G6-f2N"/>
-                    <toolbarItem reference="j0z-1G-LKl"/>
+                    <toolbarItem reference="dvm-QY-ZCQ"/>
+                    <toolbarItem reference="QxY-x1-yug"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="193.5" y="110"/>
+            <point key="canvasLocation" x="64" y="132"/>
         </window>
     </objects>
-    <resources>
-        <image name="NSFolder" width="32" height="32"/>
-    </resources>
 </document>

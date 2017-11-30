@@ -12,5 +12,6 @@
 @protocol ImageCollectionViewItemDelegate <NSObject>
 
 - (void)didClickImage:(Image*)clickedImage;
+- (void)didDoubleClickImage:(Image*)clickedImage;
 
 @end

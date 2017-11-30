@@ -11,6 +11,7 @@
 @interface ImagesCollectionViewController ()
 
 @property (weak) IBOutlet NSCollectionView *imagesCollectionView;
+@property (weak) IBOutlet NSPathControl *pathControl;
 
 @end
 
@@ -19,6 +20,7 @@
 #pragma mark Synthesizing accessors
 
 @synthesize imagesCollectionView;
+@synthesize pathControl;
 
 #pragma mark Life cycle
 
@@ -67,10 +69,11 @@
 
 - (NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath
 {
-    ImageCollectionViewItem* item = [collectionView makeItemWithIdentifier:@"ImageCollectionViewItem" forIndexPath:indexPath];
+    ImageCollectionViewItem* item = (ImageCollectionViewItem*)[collectionView makeItemWithIdentifier:@"ImageCollectionViewItem" forIndexPath:indexPath];
     Image* image = [[[ImageManager shared] loadedImages] objectAtIndex:[indexPath item]];
-    [item setImage:image];
-    [item setDelegate:self];
+    // Setting represented image object and delegate
+    [item setRepresentedImageObject:image];
+    [item setItemDelegate:self];
     return item;
 }
 
@@ -78,7 +81,12 @@
 
 - (void)didClickImage:(Image *)clickedImage
 {
-    NSLog(@"Clicked!");
+    [pathControl setURL:[NSURL URLWithString:[clickedImage path]]];
+}
+
+- (void)didDoubleClickImage:(Image *)clickedImage
+{
+    
 }
 
 @end
